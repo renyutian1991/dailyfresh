@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+# from df_goods.views import index
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^',include('df_goods.urls')),
     url(r'^user/', include('df_user.urls')),
-
+    url(r'^tinymce/', include('tinymce.urls')),
 ]
